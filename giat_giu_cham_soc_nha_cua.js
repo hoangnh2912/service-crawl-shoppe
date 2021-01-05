@@ -1,7 +1,8 @@
 const puppeteer = require("puppeteer");
 const fs = require("fs");
 const config = {
-  url: "https://shopee.vn/Gi%E1%BA%B7t-gi%C5%A9-Ch%C4%83m-s%C3%B3c-nh%C3%A0-c%E1%BB%ADa-cat.17101",
+  url:
+    "https://shopee.vn/Gi%E1%BA%B7t-gi%C5%A9-Ch%C4%83m-s%C3%B3c-nh%C3%A0-c%E1%BB%ADa-cat.17101",
   file_name: "giat_giu_cham_soc_nha_cua",
   pages: 100,
 };
@@ -83,28 +84,29 @@ const crawlPage = async (pageIndex = 0, browser) => {
   return res;
 };
 
-puppeteer.launch({ devtools: false, timeout: 0 }).then(async (browser) => {
-  for (let i = 0; i < config.pages - 1; i++) {
-    {
-      console.log("Crawl page " + (i + 1));
-      const data = await crawlPage(i, browser);
-      for (let j = 0; j < data.length; j++) {
-        console.log("Item " + (j + i * data.length) + "/" + dataCrawl.length);
-        const pg = await browser.newPage();
-        await pg.goto(data[j].url);
-        try {
-          const des = await pg.evaluate(() => {
-            return document.getElementsByClassName("_2u0jt9").item(0)
-              .textContent;
-          });
-          dataCrawl[j + i * data.length]["Description"] = des;
-        } catch (error) {}
+puppeteer
+  .launch({ devtools: false, timeout: 0, args: ["--no-sandbox"] })
+  .then(async (browser) => {
+    for (let i = 0; i < config.pages - 1; i++) {
+      {
+        console.log("Crawl page " + (i + 1));
+        const data = await crawlPage(i, browser);
+        for (let j = 0; j < data.length; j++) {
+          console.log("Item " + (j + i * data.length) + "/" + dataCrawl.length);
+          const pg = await browser.newPage();
+          await pg.goto(data[j].url);
+          try {
+            const des = await pg.evaluate(() => {
+              return document.getElementsByClassName("_2u0jt9").item(0)
+                .textContent;
+            });
+            dataCrawl[j + i * data.length]["Description"] = des;
+          } catch (error) {}
 
-        await pg.close();
+          await pg.close();
+        }
       }
+      fs.writeFileSync(`./${config.file_name}.json`, JSON.stringify(dataCrawl));
+      console.log("saved file: " + (i + 1));
     }
-    fs.writeFileSync(`./${config.file_name}.json`, JSON.stringify(dataCrawl));
-    console.log("saved file: " + (i + 1));
-  }
-});
-
+  });
