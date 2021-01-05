@@ -2,5 +2,6 @@
   "devtools": false,
   "timeout": 0,
   "args": ["--no-sandbox"],
-  "executablePath": "/usr/lib/chromium-browser/chromium-browser"
+  "executablePath": "/usr/lib/chromium-browser/chromium-browser",
+  "save": ""
 }
