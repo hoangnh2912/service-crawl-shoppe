@@ -104,7 +104,10 @@ puppeteer.launch(require("./config.json")).then(async (browser) => {
         await pg.close();
       }
     }
-    fs.writeFileSync(`./${config.file_name}.json`, JSON.stringify(dataCrawl));
+    fs.writeFileSync(
+      `.${require("./config.json").save}/${config.file_name}.json`,
+      JSON.stringify(dataCrawl)
+    );
     console.log("saved file: " + (i + 1));
   }
 });
