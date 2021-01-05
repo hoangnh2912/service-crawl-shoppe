@@ -1,0 +1,2 @@
+TimeoutError: Navigation timeout of 30000 ms exceeded
+    at /home/hoang/cham_soc_thu_cung/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:106:111

@@ -1,0 +1,68 @@
+2021-01-05T21:17:56: PM2 log: ===============================================================================
+2021-01-05T21:17:56: PM2 log: --- New PM2 Daemon started ----------------------------------------------------
+2021-01-05T21:17:56: PM2 log: Time                 : Tue Jan 05 2021 21:17:56 GMT+0000 (Coordinated Universal Time)
+2021-01-05T21:17:56: PM2 log: PM2 version          : 4.5.1
+2021-01-05T21:17:56: PM2 log: Node.js version      : 12.20.0
+2021-01-05T21:17:56: PM2 log: Current arch         : x64
+2021-01-05T21:17:56: PM2 log: PM2 home             : /home/hoang/.pm2
+2021-01-05T21:17:56: PM2 log: PM2 PID file         : /home/hoang/.pm2/pm2.pid
+2021-01-05T21:17:56: PM2 log: RPC socket file      : /home/hoang/.pm2/rpc.sock
+2021-01-05T21:17:56: PM2 log: BUS socket file      : /home/hoang/.pm2/pub.sock
+2021-01-05T21:17:56: PM2 log: Application log path : /home/hoang/.pm2/logs
+2021-01-05T21:17:56: PM2 log: Worker Interval      : 30000
+2021-01-05T21:17:56: PM2 log: Process dump file    : /home/hoang/.pm2/dump.pm2
+2021-01-05T21:17:56: PM2 log: Concurrent actions   : 2
+2021-01-05T21:17:56: PM2 log: SIGTERM timeout      : 1600
+2021-01-05T21:17:56: PM2 log: ===============================================================================
+2021-01-05T21:17:56: PM2 log: App [cr:0] starting in -fork mode-
+2021-01-05T21:17:56: PM2 log: App [cr:0] online
+2021-01-05T21:21:39: PM2 error: 1 : id unknown
+2021-01-05T21:21:41: PM2 log: Stopping app:cr id:0
+2021-01-05T21:21:41: PM2 log: App [cr:0] exited with code [130] via signal [SIGINT]
+2021-01-05T21:21:41: PM2 log: pid=31203 msg=process killed
+2021-01-05T21:25:02: PM2 log: App [cr:0] starting in -fork mode-
+2021-01-05T21:25:02: PM2 log: App [cr:0] online
+2021-01-05T21:35:28: PM2 log: App [cr:1] starting in -fork mode-
+2021-01-05T21:35:28: PM2 log: App [cr:1] online
+2021-01-05T21:36:54: PM2 log: Stopping app:cr id:0
+2021-01-05T21:36:55: PM2 log: pid=31873 msg=failed to kill - retrying in 100ms
+2021-01-05T21:36:55: PM2 log: pid=31873 msg=failed to kill - retrying in 100ms
+2021-01-05T21:36:55: PM2 log: pid=31873 msg=failed to kill - retrying in 100ms
+2021-01-05T21:36:55: PM2 log: pid=31873 msg=failed to kill - retrying in 100ms
+2021-01-05T21:36:55: PM2 log: pid=31873 msg=failed to kill - retrying in 100ms
+2021-01-05T21:36:55: PM2 log: pid=31873 msg=failed to kill - retrying in 100ms
+2021-01-05T21:36:55: PM2 log: App [cr:0] exited with code [130] via signal [SIGINT]
+2021-01-05T21:36:55: PM2 log: pid=31873 msg=process killed
+2021-01-05T21:36:55: PM2 log: Stopping app:cr id:1
+2021-01-05T21:36:56: PM2 log: pid=34011 msg=failed to kill - retrying in 100ms
+2021-01-05T21:36:56: PM2 log: App [cr:1] exited with code [130] via signal [SIGINT]
+2021-01-05T21:36:56: PM2 log: pid=34011 msg=process killed
+2021-01-05T21:44:02: PM2 log: App [bach_hoa_online:2] starting in -fork mode-
+2021-01-05T21:44:02: PM2 log: App [bach_hoa_online:2] online
+2021-01-05T21:45:22: PM2 log: App [cham_song_thu_cung:3] starting in -fork mode-
+2021-01-05T21:45:22: PM2 log: App [cham_song_thu_cung:3] online
+2021-01-05T21:47:54: PM2 log: App [giat_giu_cham_soc_nha_cua:4] starting in -fork mode-
+2021-01-05T21:47:54: PM2 log: App [giat_giu_cham_soc_nha_cua:4] online
+2021-01-05T21:49:09: PM2 log: Stopping app:bach_hoa_online id:2
+2021-01-05T21:49:10: PM2 log: Stopping app:cham_song_thu_cung id:3
+2021-01-05T21:49:20: PM2 log: pid=34415 msg=failed to kill - retrying in 100ms
+2021-01-05T21:49:20: PM2 log: pid=34752 msg=failed to kill - retrying in 100ms
+2021-01-05T21:49:21: PM2 log: pid=34415 msg=failed to kill - retrying in 100ms
+2021-01-05T21:49:21: PM2 log: pid=34752 msg=failed to kill - retrying in 100ms
+2021-01-05T21:49:21: PM2 log: pid=34415 msg=failed to kill - retrying in 100ms
+2021-01-05T21:49:21: PM2 log: pid=34752 msg=failed to kill - retrying in 100ms
+2021-01-05T21:49:21: PM2 log: pid=34415 msg=failed to kill - retrying in 100ms
+2021-01-05T21:49:21: PM2 log: pid=34752 msg=failed to kill - retrying in 100ms
+2021-01-05T21:49:21: PM2 log: pid=34415 msg=failed to kill - retrying in 100ms
+2021-01-05T21:49:21: PM2 log: pid=34752 msg=failed to kill - retrying in 100ms
+2021-01-05T21:49:21: PM2 log: pid=34415 msg=failed to kill - retrying in 100ms
+2021-01-05T21:49:21: PM2 log: pid=34752 msg=failed to kill - retrying in 100ms
+2021-01-05T21:49:21: PM2 log: App [cham_song_thu_cung:3] exited with code [130] via signal [SIGINT]
+2021-01-05T21:49:21: PM2 log: pid=34415 msg=failed to kill - retrying in 100ms
+2021-01-05T21:49:21: PM2 log: pid=34752 msg=process killed
+2021-01-05T21:49:21: PM2 log: Stopping app:giat_giu_cham_soc_nha_cua id:4
+2021-01-05T21:49:21: PM2 log: App [bach_hoa_online:2] exited with code [130] via signal [SIGINT]
+2021-01-05T21:49:21: PM2 log: pid=34415 msg=process killed
+2021-01-05T21:49:22: PM2 log: pid=35371 msg=failed to kill - retrying in 100ms
+2021-01-05T21:49:22: PM2 log: App [giat_giu_cham_soc_nha_cua:4] exited with code [130] via signal [SIGINT]
+2021-01-05T21:49:22: PM2 log: pid=35371 msg=process killed
