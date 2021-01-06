@@ -48,6 +48,7 @@ async function autoScrollTop(page) {
 let dataCrawl = [];
 const crawlPage = async (pageIndex = 0, browser) => {
   const page = await browser.newPage();
+  await page.setDefaultNavigationTimeout(0);
 
   await page.goto(`${config.url}?page=${pageIndex}`, {
     waitUntil: "networkidle2",
@@ -92,6 +93,7 @@ puppeteer.launch(require("./config.json")).then(async (browser) => {
       for (let j = 0; j < data.length; j++) {
         console.log("Item " + (j + i * data.length) + "/" + dataCrawl.length);
         const pg = await browser.newPage();
+        await pg.setDefaultNavigationTimeout(0);
         await pg.goto(data[j].url, {
           waitUntil: "networkidle2",
         });
