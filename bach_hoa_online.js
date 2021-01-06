@@ -99,7 +99,7 @@ puppeteer.launch(require("./config.json")).then(async (browser) => {
             return document.getElementsByClassName("_2u0jt9").item(0)
               .textContent;
           });
-          dataCrawl[j + i * data.length]["Description"] = des;
+          dataCrawl[j + i * data.length]["description"] = des;
         } catch (error) {}
 
         await pg.close();
