@@ -91,7 +91,9 @@ puppeteer.launch(require("./config.json")).then(async (browser) => {
       for (let j = 0; j < data.length; j++) {
         console.log("Item " + (j + i * data.length) + "/" + dataCrawl.length);
         const pg = await browser.newPage();
-        await pg.goto(data[j].url);
+        await pg.goto(data[j].url, {
+          waitUntil: "networkidle2",
+        });
         try {
           const des = await pg.evaluate(() => {
             return document.getElementsByClassName("_2u0jt9").item(0)
