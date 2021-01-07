@@ -7,10 +7,9 @@ const ignoredFiles = [
   "README.md",
   "yarn.lock",
 ];
-let i = 0;
 fs.readdirSync("./").map((elem) => {
   if (elem.split(".")[1] == "js" && !ignoredFiles.includes(elem))
-    console.log(i++);
+    console.log("!pm2 start " + elem);
   if (elem.split(".")[1] == "json" && !ignoredFiles.includes(elem))
     console.log(elem);
 });
